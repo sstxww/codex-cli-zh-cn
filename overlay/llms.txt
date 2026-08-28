@@ -1,0 +1,20 @@
+# Codex CLI zh-CN localization fork
+
+> Unofficial, separate Simplified Chinese interactive TUI for OpenAI Codex, preserving official commands and state boundaries.
+
+## Required agent entry
+- [Agent start](AGENT_START_HERE.md): ask language/component choices, inspect read-only, obtain confirmation, execute, verify.
+
+## Human documentation
+- [中文说明](README.zh-CN.md)
+- [English installation](INSTALL.md)
+- [中文安装](INSTALL.zh-CN.md)
+
+## Reusable localization guidance
+- [Localization playbook](LOCALIZATION_PLAYBOOK.md): architecture, translation boundary, Unicode width, tests, privacy, and other-language workflow.
+- [Maintainer guide](MAINTAINING.md): provenance, upstream sync, checks, and releases.
+- [Agent manifest](agent-manifest.json)
+- [Codex skill](skills/setup-codex-cli-zh-cn/SKILL.md)
+
+## Independent companion
+- [codex-cli-home-switcher](https://github.com/LH-03/codex-cli-home-switcher): isolated OpenAI/DeepSeek/compatible-provider homes for Windows PowerShell.

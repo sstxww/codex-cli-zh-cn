@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set up Codex CLI zh-CN"
+  short_description: "Confirm language and install the optional Chinese Codex UI"
+  default_prompt: "Use $setup-codex-cli-zh-cn to inspect my Codex CLI, confirm the language and profile choices, and install only after I approve the plan."

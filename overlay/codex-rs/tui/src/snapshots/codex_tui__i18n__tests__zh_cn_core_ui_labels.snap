@@ -1,0 +1,15 @@
+---
+source: tui/src/i18n_tests.rs
+expression: rendered
+---
+/model        选择模型
+/permissions  更新模型权限
+/resume       恢复以前的会话
+/statusline   配置状态栏
+/title        配置终端标题
+/memories     记忆设置
+/hooks        钩子
+/plugins      插件
+/theme        选择语法高亮主题
+/keymap       快捷键设置
+empty         没有匹配项

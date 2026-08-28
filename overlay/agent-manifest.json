@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "project": "codex-cli-zh-cn",
+  "agent_entrypoint": "AGENT_START_HERE.md",
+  "human_entrypoints": {
+    "en": "INSTALL.md",
+    "zh-CN": "README.zh-CN.md"
+  },
+  "choices_to_confirm": [
+    "zh-cn-ui-only",
+    "home-switcher-only",
+    "both",
+    "other-language-localization",
+    "manual-only"
+  ],
+  "requires_explicit_confirmation_before_write": true,
+  "safety_invariants": [
+    "preserve-official-codex",
+    "preserve-canonical-commands-flags-paths-and-ids",
+    "never-translate-model-or-raw-tool-output",
+    "never-read-or-merge-codex-home-state",
+    "never-assume-chinese-for-other-language-users"
+  ],
+  "automation": {
+    "prebuilt_platform": "windows-x64",
+    "installer": "localization/install-windows.ps1",
+    "uninstaller": "localization/uninstall-windows.ps1",
+    "packager": "localization/package-windows.ps1",
+    "test": "localization/test-installer.ps1"
+  },
+  "companion": "https://github.com/LH-03/codex-cli-home-switcher",
+  "upstream": "https://github.com/openai/codex",
+  "upstream_tag": "rust-v0.150.0-alpha.8"
+}
