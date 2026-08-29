@@ -1,0 +1,75 @@
+name: Build Windows release
+
+on:
+  workflow_dispatch:
+    inputs:
+      upstream_tag:
+        description: Official openai/codex tag to build
+        required: true
+        type: string
+      release_tag:
+        description: Existing release tag that receives the Windows archive
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: windows-2025
+
+    steps:
+      - name: Check out localization source
+        uses: actions/checkout@v4
+
+      - name: Check out matching Codex source
+        uses: actions/checkout@v4
+        with:
+          repository: openai/codex
+          ref: ${{ inputs.upstream_tag }}
+          path: upstream
+          fetch-depth: 1
+
+      - name: Apply localization overlay
+        shell: pwsh
+        run: Copy-Item -Path ".\overlay\*" -Destination ".\upstream" -Recurse -Force
+
+      - name: Build codex-zh
+        shell: pwsh
+        working-directory: upstream/codex-rs
+        run: cargo build --locked --release -p codex-tui --bin codex-zh
+
+      - name: Package Windows archive
+        shell: pwsh
+        run: |
+          .\overlay\localization\package-windows.ps1 `
+            -BinaryPath ".\upstream\codex-rs\target\release\codex-zh.exe" `
+            -OutputDirectory ".\dist"
+
+      - name: Verify packaged command and contents
+        shell: pwsh
+        run: |
+          $extractDirectory = Join-Path $env:RUNNER_TEMP "codex-zh-package"
+          Expand-Archive -LiteralPath ".\dist\codex-cli-zh-cn-windows-x64.zip" -DestinationPath $extractDirectory
+
+          $actualFiles = @(Get-ChildItem -LiteralPath $extractDirectory -File | Sort-Object Name | ForEach-Object Name)
+          $expectedFiles = @("README.txt", "codex-zh.cmd", "codex-zh.exe")
+          $difference = @(Compare-Object -ReferenceObject $expectedFiles -DifferenceObject $actualFiles)
+          if ($difference.Count -ne 0) {
+            throw "Unexpected files in the release archive: $($actualFiles -join ', ')"
+          }
+
+          & (Join-Path $extractDirectory "codex-zh.exe") --version
+          if ($LASTEXITCODE -ne 0) {
+            exit $LASTEXITCODE
+          }
+
+      - name: Upload archive to release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "${{ inputs.release_tag }}" `
+            ".\dist\codex-cli-zh-cn-windows-x64.zip" `
+            --repo "${{ github.repository }}"
