@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/sstxww/codex-cli-zh-cn/actions/workflows/build-windows-release.yml"><img src="https://img.shields.io/github/actions/workflow/status/sstxww/codex-cli-zh-cn/build-windows-release.yml?branch=main&style=flat-square&label=Windows%20build" alt="Windows build" /></a>
-  <a href="https://github.com/sstxww/codex-cli-zh-cn/releases/latest"><img src="https://img.shields.io/github/v/release/sstxww/codex-cli-zh-cn?display_name=tag&style=flat-square" alt="Latest release" /></a>
+  <a href="https://github.com/sstxww/codex-cli-zh-cn/actions/workflows/build-windows-release.yml"><img src="https://img.shields.io/badge/artifact-workflow_build-2563EB?style=flat-square&logo=githubactions&logoColor=white" alt="Workflow build artifact" /></a>
   <img src="https://img.shields.io/badge/platform-Windows%20x64-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows x64" />
   <img src="https://img.shields.io/badge/Codex-0.150.0--alpha.8-111827?style=flat-square" alt="Codex compatibility baseline" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-3b82f6?style=flat-square" alt="Apache-2.0" /></a>
