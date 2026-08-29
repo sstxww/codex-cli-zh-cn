@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/sstxww/codex-cli-zh-cn/actions/workflows/build-windows-release.yml"><img src="https://img.shields.io/github/actions/workflow/status/sstxww/codex-cli-zh-cn/build-windows-release.yml?branch=main&style=flat-square&label=Windows%20%E6%9E%84%E5%BB%BA" alt="Windows 构建状态" /></a>
-  <a href="https://github.com/sstxww/codex-cli-zh-cn/releases/latest"><img src="https://img.shields.io/github/v/release/sstxww/codex-cli-zh-cn?display_name=tag&style=flat-square" alt="最新版本" /></a>
+  <a href="https://github.com/sstxww/codex-cli-zh-cn/actions/workflows/build-windows-release.yml"><img src="https://img.shields.io/badge/%E4%BA%A7%E7%89%A9-%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%9E%84%E5%BB%BA-2563EB?style=flat-square&logo=githubactions&logoColor=white" alt="工作流构建产物" /></a>
   <img src="https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-Windows%20x64-0078D4?style=flat-square&logo=windows11&logoColor=white" alt="Windows x64" />
   <img src="https://img.shields.io/badge/Codex-0.150.0--alpha.8-111827?style=flat-square" alt="Codex 兼容基线" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-Apache--2.0-3b82f6?style=flat-square" alt="Apache-2.0" /></a>
