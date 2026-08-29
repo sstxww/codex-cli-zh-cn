@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Codex CLI Simplified Chinese TUI</title>
+  <desc id="desc">A dark terminal-inspired banner for the unofficial Simplified Chinese Codex CLI interface.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="0.55" stop-color="#12233f"/>
+      <stop offset="1" stop-color="#34206b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#59d6ff"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#020617" flood-opacity=".55"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="420" rx="32" fill="url(#bg)"/>
+  <circle cx="1050" cy="70" r="170" fill="#7c3aed" opacity=".12"/>
+  <circle cx="110" cy="390" r="230" fill="#0ea5e9" opacity=".10"/>
+  <g filter="url(#shadow)">
+    <rect x="72" y="58" width="1056" height="304" rx="22" fill="#0b1220" stroke="#334155"/>
+    <rect x="72" y="58" width="1056" height="48" rx="22" fill="#172033"/>
+    <rect x="72" y="85" width="1056" height="21" fill="#172033"/>
+    <circle cx="104" cy="82" r="7" fill="#fb7185"/>
+    <circle cx="128" cy="82" r="7" fill="#fbbf24"/>
+    <circle cx="152" cy="82" r="7" fill="#34d399"/>
+  </g>
+  <text x="112" y="166" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="24">$ codex-zh</text>
+  <text x="112" y="226" fill="url(#accent)" font-family="Inter, 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="50" font-weight="750">Codex CLI 简体中文交互界面</text>
+  <text x="112" y="274" fill="#cbd5e1" font-family="Inter, 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="24">独立命令 · 官方基线覆盖层 · Windows x64</text>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="17" font-weight="600">
+    <rect x="112" y="308" width="126" height="34" rx="17" fill="#0c4a6e"/><text x="135" y="331" fill="#bae6fd">codex-zh</text>
+    <rect x="250" y="308" width="142" height="34" rx="17" fill="#3b1d68"/><text x="274" y="331" fill="#ddd6fe">Apache-2.0</text>
+    <rect x="404" y="308" width="152" height="34" rx="17" fill="#123a35"/><text x="429" y="331" fill="#a7f3d0">Windows x64</text>
+  </g>
+</svg>
